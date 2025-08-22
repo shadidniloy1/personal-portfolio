@@ -46,14 +46,14 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <button
+          {/* <button
             className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
           >
             {open ? "✕" : "☰"}
-          </button>
+          </button> */}
         </nav>
         {open && (
           <div className="md:hidden px-3 pb-3">
@@ -81,6 +81,14 @@ const Navbar = () => {
         <button className="font-semibold font-poppins bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 cursor-pointer">
           Hire me
         </button>
+        <button
+            className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? "✕" : "☰"}
+          </button>
       </div>
     </div>
   );
