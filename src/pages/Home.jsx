@@ -5,7 +5,7 @@ import Projects from "../components/Projects";
 
 const Home = () => {
   return (
-    <div className="m-6 mt-0">
+    <div className="m-6 mt-0 bg-gray-50">
       <Navbar />
       <Hero />
       <About />

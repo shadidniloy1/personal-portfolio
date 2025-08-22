@@ -8,6 +8,7 @@
 @import "tailwindcss";
 
 
-/* a.active{
-    background-color: #E7E7E7;
-} */
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}

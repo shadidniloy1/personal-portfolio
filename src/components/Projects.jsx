@@ -1,4 +1,9 @@
 import { motion } from "framer-motion";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../index.css";
 
 const Projects = () => {
   const data = [
@@ -43,6 +48,71 @@ const Projects = () => {
       github: `https://github.com/shadidniloy1/summer-sale`,
     },
   ];
+
+  const CustomPrevArrow = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div className={`${className} !left-2 z-10`} onClick={onClick}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-8 w-8 text-blue-600 hover:text-blue-800 transition"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </div>
+    );
+  };
+
+  const CustomNextArrow = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div className={`${className} !right-2 z-10`} onClick={onClick}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-8 w-8 text-blue-600 hover:text-blue-800 transition"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </div>
+    );
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2, slidesToScroll: 2 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1, slidesToScroll: 1 },
+      },
+    ],
+  };
+
   return (
     <section id="projects" className="py-20 bg-gray-50 text-gray-900">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
@@ -50,34 +120,43 @@ const Projects = () => {
           My Projects
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <Slider {...settings}>
           {data.map((d, index) => (
             <motion.div
               key={d.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white shadow-lg rounded-2xl p-6 flex flex-col justify-between"
+              whileHover={{ scale: 1.03 }}
+              className="px-3 h-125"
             >
-              <div>
-                <img src={d.image} alt="" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">{d.title}</h3>
-                <p className="text-gray-600 flex-grow">{d.description}</p>
-                <a
-                  href={d.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-block text-blue-600 hover:underline"
-                >
-                  View Project →
-                </a>
+              <div className="bg-white shadow-lg rounded-2xl p-6 h-full flex flex-col">
+                {/* Fixed height for image */}
+                <div className="w-full h-75 flex justify-center items-center overflow-hidden">
+                  <img
+                    className="object-cover h-full w-full rounded-md"
+                    src={d.image}
+                    alt={d.title}
+                  />
+                </div>
+
+                {/* Info pushed to bottom */}
+                <div className="flex flex-col flex-grow mt-4">
+                  <h3 className="text-xl font-semibold mb-3">{d.title}</h3>
+                  <p className="text-gray-600 flex-grow">{d.description}</p>
+                  <a
+                    href={d.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block text-blue-600 hover:underline"
+                  >
+                    View Project →
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );

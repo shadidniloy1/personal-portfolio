@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white text-gray-900">
+    <section id="about" className="py-20 text-gray-900">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-4xl space-y-10 text-center md:text-left">
         {/* Section Title */}
         <motion.h2
