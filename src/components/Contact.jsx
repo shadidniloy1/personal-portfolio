@@ -8,12 +8,14 @@ const contacts = [
     id: 1,
     name: "Gmail",
     icon: <SiGmail size={24} color="red" />,
-    link: `shadidhasan1@gmail.com`,
+    property: `shadidhasan1@gmail.com`,
+    link: `mailto:shadidhasan1@gmail.com`,
   },
   {
     id: 2,
     name: "Phone",
     icon: <FaPhone size={24} color="green" />,
+    property: "+880 1609-334597",
     link: "+880 1609-334597",
   },
   {
@@ -21,12 +23,14 @@ const contacts = [
     name: "GitHub",
     icon: <FaGithub size={24} />,
     link: "https://github.com/shadidniloy1",
+    property: "https://github.com/shadidniloy1",
   },
   {
     id: 4,
     name: "LinkedIn",
     icon: <FaLinkedin size={24} color="blue" />,
     link: "https://www.linkedin.com/in/shadid-hasan",
+    property: "https://www.linkedin.com/in/shadid-hasan",
   },
 ];
 
@@ -64,7 +68,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition"
                 >
-                  <span className="font-medium">{item.link}</span>
+                  <span className="font-medium">{item.property}</span>
                 </a>
               </li>
             ))}
