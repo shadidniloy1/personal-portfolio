@@ -1,10 +1,12 @@
 import { useState } from "react";
+import logo from "/logo_sign.png";
 
 const LINKS = [
   { id: "home", label: "Home", href: "#home" },
   { id: "about", label: "About", href: "#about" },
   { id: "projects", label: "Projects", href: "#projects" },
   { id: "skills", label: "Skills", href: "#skills" },
+  { id: "profile", label: "Profile", href: "#profile" },
   { id: "experience", label: "Experience", href: "#experience" },
   { id: "contact", label: "Contact", href: "#contact" },
 ];
@@ -26,7 +28,9 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between sticky top-0 z-50 border-b border-slate-200 bg-slate-50/80 backdrop-blur rounded-md p-5">
-      <div className="text-4xl font-poppins ">Logo</div>
+      <div className="text-4xl font-poppins ">
+        <img className="w-32 rounded-md" src={logo} alt="" />
+      </div>
       <div className="font-semibold flex gap-4 items-center justify-center">
         <nav>
           <ul className="hidden md:flex items-center gap-2">
@@ -82,13 +86,13 @@ const Navbar = () => {
           Hire me
         </button>
         <button
-            className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100"
-            aria-label="Toggle menu"
-            aria-expanded={open}
-            onClick={() => setOpen((o) => !o)}
-          >
-            {open ? "✕" : "☰"}
-          </button>
+          className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? "✕" : "☰"}
+        </button>
       </div>
     </div>
   );

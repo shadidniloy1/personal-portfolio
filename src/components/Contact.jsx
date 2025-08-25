@@ -9,7 +9,7 @@ const contacts = [
     name: "Gmail",
     icon: <SiGmail size={24} color="red" />,
     property: `shadidhasan1@gmail.com`,
-    link: `mailto:shadidhasan1@gmail.com`,
+    link: `https://mail.google.com/mail/?view=cm&fs=1&to=shadidhasan1@gmail.com&su=Hello&body=I%20want%20to%20connect%20with%20you`,
   },
   {
     id: 2,
