@@ -23,14 +23,14 @@ const contacts = [
     name: "GitHub",
     icon: <FaGithub size={24} />,
     link: "https://github.com/shadidniloy1",
-    property: "https://github.com/shadidniloy1",
+    property: "shadidniloy1",
   },
   {
     id: 4,
     name: "LinkedIn",
     icon: <FaLinkedin size={24} color="blue" />,
     link: "https://www.linkedin.com/in/shadid-hasan",
-    property: "https://www.linkedin.com/in/shadid-hasan",
+    property: "shadid-hasan",
   },
 ];
 
