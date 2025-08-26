@@ -93,22 +93,46 @@ const Projects = () => {
     );
   };
 
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   prevArrow: <CustomPrevArrow />,
+  //   nextArrow: <CustomNextArrow />,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: { slidesToShow: 2, slidesToScroll: 2 },
+  //     },
+  //     {
+  //       breakpoint: 640,
+  //       settings: { slidesToShow: 1, slidesToScroll: 1 },
+  //     },
+  //   ],
+  // };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // default for desktop
     slidesToScroll: 1,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2, slidesToScroll: 2 },
+        breakpoint: 1024, // tablet
+        settings: {
+          slidesToShow: 2,
+        },
       },
       {
-        breakpoint: 640,
-        settings: { slidesToShow: 1, slidesToScroll: 1 },
+        breakpoint: 640, // mobile
+        settings: {
+          slidesToShow: 1, // only 1 card per slide
+        },
       },
     ],
   };
@@ -130,11 +154,11 @@ const Projects = () => {
               whileHover={{ scale: 1.03 }}
               className="px-3 h-125"
             >
-              <div className="bg-white shadow-lg rounded-2xl p-6 h-full flex flex-col">
+              <div className="bg-white shadow-lg rounded-2xl p-6 w-full h-full flex flex-col">
                 {/* Fixed height for image */}
                 <div className="w-full h-75 flex justify-center items-center overflow-hidden">
                   <img
-                    className="object-cover h-full w-full rounded-md"
+                    className="object-cover h-60 w-full rounded-md"
                     src={d.image}
                     alt={d.title}
                   />
@@ -143,7 +167,9 @@ const Projects = () => {
                 {/* Info pushed to bottom */}
                 <div className="flex flex-col flex-grow mt-4">
                   <h3 className="text-xl font-semibold mb-3">{d.title}</h3>
-                  <p className="text-gray-600 flex-grow">{d.description}</p>
+                  <p className="text-gray-600 flex-grow break-words">
+                    {d.description}
+                  </p>
                   <a
                     href={d.link}
                     target="_blank"
