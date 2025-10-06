@@ -47,7 +47,7 @@ const Hero = () => {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         >
           <img
-            src="/projects/niloy.png"
+            src="/niloy.png"
             alt="Shadid Hasan"
             className="w-60 rounded-full shadow-lg sm:w-72 md:w-100"
           />
