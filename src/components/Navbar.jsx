@@ -49,15 +49,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
-          {/* <button
-            className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100"
-            aria-label="Toggle menu"
-            aria-expanded={open}
-            onClick={() => setOpen((o) => !o)}
-          >
-            {open ? "✕" : "☰"}
-          </button> */}
         </nav>
         {open && (
           <div className="md:hidden px-3 pb-3">
@@ -82,9 +73,9 @@ const Navbar = () => {
         )}
       </div>
       <div>
-        <button className="font-semibold font-poppins bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 cursor-pointer">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shadidhasan1@gmail.com&su=Hello&body=I%20want%20to%20connect%20with%20you" className="font-semibold font-poppins bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 cursor-pointer">
           Hire me
-        </button>
+        </a>
         <button
           className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100"
           aria-label="Toggle menu"

@@ -33,6 +33,14 @@ const Projects = () => {
     },
     {
       id: 4,
+      title: `Family Guy`,
+      image: `/projects/family_guy.png`,
+      description: `Family Guy is a full stack Next.js application to show the character information of the series - Family Guy. Both building API endpoint and use of UI followed my modern web app. A quiz section is also introduced to give a quick mind training.`,
+      link: `https://family-guy-psi.vercel.app/`,
+      github: `https://github.com/shadidniloy1/family-guy`,
+    },
+    {
+      id: 5,
       title: `PaperLabs`,
       image: `/projects/paperlabs.png`,
       description: `PaperLabs is a web-based educational platform designed to simplify the process of submitting and evaluating laboratory reports for students and teachers. As the front-end developer and product designer, I built the application using React, Node.js, and GitHub integration.`,
@@ -40,7 +48,7 @@ const Projects = () => {
       github: ``,
     },
     {
-      id: 5,
+      id: 6,
       title: `Modern Kitchenware`,
       image: `/projects/kitchenware.png`,
       description: `Modern Kitchenware is a kitchen shop website which is used in online marketing. After clicking every section of products, items will be added on cart. If you use promo code SELL200 and click on apply, you will get 20% discount.`,
@@ -92,26 +100,6 @@ const Projects = () => {
       </div>
     );
   };
-
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   prevArrow: <CustomPrevArrow />,
-  //   nextArrow: <CustomNextArrow />,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: { slidesToShow: 2, slidesToScroll: 2 },
-  //     },
-  //     {
-  //       breakpoint: 640,
-  //       settings: { slidesToShow: 1, slidesToScroll: 1 },
-  //     },
-  //   ],
-  // };
 
   const settings = {
     dots: true,

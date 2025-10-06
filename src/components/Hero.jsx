@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import niloy from "../assets/niloy.jpg";
 import { motion } from "framer-motion";
 
@@ -26,25 +27,22 @@ const Hero = () => {
           {/* Call-to-action buttons */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="#contact"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=shadidhasan1@gmail.com&su=Hello&body=I%20want%20to%20connect%20with%20you"
               className="rounded-xl bg-blue-600 px-6 py-3 font-medium text-white shadow-sm transition hover:bg-blue-700"
             >
               Hire Me
             </a>
-            <a
-              href="/resume.pdf"
+            <Link
+              to='/resume'
               className="rounded-xl border border-blue-600 px-6 py-3 font-medium text-blue-600 transition hover:bg-blue-600 hover:text-white"
             >
               View Resume
-            </a>
+            </Link>
           </div>
         </div>
         {/* right */}
         <motion.div
           className="flex justify-center"
-          // initial={{ y: 30, opacity: 0 }}
-          // animate={{ y: [0, -10, 0], opacity: 1 }}
-          // transition={{ duration: 3, repeat: Infinity }}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: [1, 1.05, 1] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
