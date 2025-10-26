@@ -26,13 +26,13 @@ const Hero = () => {
           {/* Call-to-action buttons */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=shadidhasan1@gmail.com&su=Hello&body=I%20want%20to%20connect%20with%20you"
+              href="https://www.upwork.com/freelancers/~01aaf7da72a6848718"
               className="rounded-xl bg-blue-600 px-6 py-3 font-medium text-white shadow-sm transition hover:bg-blue-700"
             >
               Hire Me
             </a>
             <Link
-              to='/resume'
+              to="/resume"
               className="rounded-xl border border-blue-600 px-6 py-3 font-medium text-blue-600 transition hover:bg-blue-600 hover:text-white"
             >
               View Resume
@@ -42,14 +42,31 @@ const Hero = () => {
         {/* right */}
         <motion.div
           className="flex justify-center"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: [1, 1.05, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1], // Custom bezier curve for smooth easing
+          }}
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.3, ease: "easeOut" },
+          }}
         >
-          <img
+          <motion.img
             src="/niloy.png"
             alt="Shadid Hasan"
-            className="w-60 rounded-full shadow-lg sm:w-72 md:w-100"
+            className="w-60 rounded-full shadow-lg sm:w-72 md:w-100 flex justify-center items-center"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.2,
+              ease: [0.34, 1.56, 0.64, 1], // Subtle spring-like effect
+            }}
           />
         </motion.div>
       </div>

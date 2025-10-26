@@ -72,8 +72,8 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      <div>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shadidhasan1@gmail.com&su=Hello&body=I%20want%20to%20connect%20with%20you" className="font-semibold font-poppins bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 cursor-pointer">
+      <div className="flex justify-center items-center">
+        <a href="https://www.upwork.com/freelancers/~01aaf7da72a6848718" className="font-semibold font-poppins bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 cursor-pointer flex justify-center items-center">
           Hire me
         </a>
         <button

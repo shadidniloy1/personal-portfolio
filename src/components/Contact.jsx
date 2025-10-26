@@ -8,15 +8,15 @@ const contacts = [
     id: 1,
     name: "Gmail",
     icon: <SiGmail size={24} color="red" />,
-    property: `shadidhasan1@gmail.com`,
-    link: `https://mail.google.com/mail/?view=cm&fs=1&to=shadidhasan1@gmail.com&su=Hello&body=I%20want%20to%20connect%20with%20you`,
+    property: `example`,
+    link: `https://www.upwork.com/freelancers/~01aaf7da72a6848718`,
   },
   {
     id: 2,
     name: "Phone",
     icon: <FaPhone size={24} color="green" />,
-    property: "+880 1609-334597",
-    link: "+880 1609-334597",
+    property: "example",
+    link: "https://www.upwork.com/freelancers/~01aaf7da72a6848718",
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ const contacts = [
     id: 4,
     name: "LinkedIn",
     icon: <FaLinkedin size={24} color="blue" />,
-    link: "https://www.linkedin.com/in/shadid-hasan",
-    property: "shadid-hasan",
+    link: "https://www.upwork.com/freelancers/~01aaf7da72a6848718",
+    property: "example",
   },
 ];
 
